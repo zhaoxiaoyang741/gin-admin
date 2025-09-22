@@ -13,9 +13,9 @@ import (
 
 func InitServer() {
 	c := gin.Default()
-	url := fmt.Sprintf("127.0.0.1:%s", global.BaseSystem.System.Port)
+	url := fmt.Sprintf("127.0.0.1:%s", global.Config.System.Port)
 	if gin.Mode() == gin.ReleaseMode {
-		url = fmt.Sprintf("0.0.0.0:%s", global.BaseSystem.System.Port)
+		url = fmt.Sprintf("0.0.0.0:%s", global.Config.System.Port)
 	}
 	c.Run(url)
 }

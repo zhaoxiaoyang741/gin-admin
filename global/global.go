@@ -1,7 +1,11 @@
 package global
 
-import "github.com/zhaoxiaoyang741/gin-admin/config"
+import (
+	"github.com/zhaoxiaoyang741/gin-admin/config"
+	"go.uber.org/zap"
+)
 
 var (
-	BaseSystem config.Config
+	Config config.Config
+	Logger *zap.Logger
 )
