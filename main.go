@@ -12,4 +12,5 @@ func main() {
 	// initialize.InitServer()
 	global.Logger = core.Zap()
 	global.Logger.Info("gin-admin start success----------------------")
+	global.Db = initialize.InitPostgresql()
 }
